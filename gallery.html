@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gallery</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link href="fonts/novecento-font/novecento-font.css" rel="stylesheet" type="text/css">
+    <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="gallery-grid.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/integration
+                emailjs.init('user_3YCQbPgZFKgzIzuY4BTVb');
+            })();
+        </script>
+        <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form-details').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                //this.contact_number.value = Math.random() * 100000;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_r3dpjeo', 'template_eivnzma', this)
+                    .then(function() {
+                        alert('Your feedback has been sent successfully!');
+                        console.log('suc');
+                    }, function(error) {
+                        alert('FAILED... Please retry :)', error);
+                        console.log('err');
+                    });
+            });
+        }
+        </script>
+
+
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+        <a href="index.html" class="branding">
+            <img src="images/finallogo.jpg"alt="" class="logo" style="border-radius: 50% " height="90" width="65">
+            <h1 class="site-title"><br><br>&nbsp;&nbsp;Carmel Infant<br/>Jesus Church</h1>
+        </a>
+        <div class="main-navigation">
+            <button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
+            <ul class="menu" >
+                <li class="menu-item current-menu-item"><a href="index.html">Homepage</a></li>
+                <li class="menu-item"><a href="#">Activities</a></li>
+                <li class="menu-item"><a href="gallery.html">Gallery</a></li>
+                <li class="menu-item"><a href="events.html">Events </a></li>
+                <li class="menu-item"><a href="#">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="mobile-navigation" style="text-align: right;"></div>
+    </div>
+
+</header>
+
+<div class="container gallery-container">
+    
+    <div class="tz-gallery">
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="images/park.jpg">
+                    <img src="images/park.jpg" alt="Park">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="images/bridge.jpg">
+                    <img src="images/bridge.jpg" alt="Bridge">
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <a class="lightbox" href="images/tunnel.jpg">
+                    <img src="images/tunnel.jpg" alt="Tunnel">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="images/coast.jpg">
+                    <img src="images/coast.jpg" alt="Coast">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="images/rails.jpg">
+                    <img src="images/rails.jpg" alt="Rails">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="images/traffic.jpg">
+                    <img src="images/traffic.jpg" alt="Traffic">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="images/rocks.jpg">
+                    <img src="images/rocks.jpg" alt="Rocks">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="images/benches.jpg">
+                    <img src="images/benches.jpg" alt="Benches">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="images/sky.jpg">
+                    <img src="images/sky.jpg" alt="Sky">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+<footer class="site-footer">
+                <div class="quote"><h1>Carmel Infant Jesus Church</h1></div><br><br>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="widget">
+                                <h3 class="widget-title">Our address</h3>
+                                
+                                <ul class="address">
+                                    <li><i class="fa fa-map-marker"></i><a href="https://www.google.com/maps/place/Carmel+Infant+Jesus+Church/@10.758305,79.1226494,17z/data=!3m1!4b1!4m5!3m4!1s0x3baab8c51874323d:0x9aa50fc9d84a1fcd!8m2!3d10.758305!4d79.1248381">Carmel Infant Jesus church,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nirmala Nagar,<br>
+                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thanjavur-7</li></a>
+                                     
+                                     
+                                    <li><i class="fa fa-phone"><a href="tel:04362 238457"></i> 04362 238457</li></a>
+                                    <li><i class="fa fa-envelope"><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvlHJFWNMFVQSsjbqcbTLZXWlPdqVMdHKrnLVdbqZNpvSJfPWXWHtPfCCflPNWTqJqsxNB"></i>carmelinfantjesus1976@gmail.com</li></a>
+                                    <br/><br/><br/><br/>
+                                    <a href="https://www.youtube.com/channel/UCY6KjrDBN_tIRFT_QNqQbRQ"><img src="https://img.icons8.com/color/48/000000/youtube-play.png"/> </a>&nbsp;&nbsp;
+                                    <a href="http://www.facebook.com"><img src="https://img.icons8.com/color/48/000000/facebook.png"/></a>&nbsp;&nbsp;
+                                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvlHJFWNMFVQSsjbqcbTLZXWlPdqVMdHKrnLVdbqZNpvSJfPWXWHtPfCCflPNWTqJqsxNB"><img src="https://img.icons8.com/fluent/48/000000/gmail--v1.png"/></a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="widget">
+                                <h3 class="widget-title">SHRINE FACILITIES</h3>
+                                <ul class="bullet"> 
+                                    <li><a href="#">Confession Center</a></li>
+                                    <li><a href="#">Counselling</a></li>
+                                    <li><a href="#">Stall</a></li> 
+                                    <li><a href="#">Accomdation</a></li> 
+                                    <li><a href="#">Vechile parking</a></li>  
+                                    <!-- <li><a href="#">Duis aute irure dolor in reprehenderit in voluptate</a></li>  -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="widget">
+                                <h3 class="widget-title">Contact form</h3>
+                                <form class="contact-form" id="contact-form-details">
+                                    <div class="row">
+                                        <div class="col-md-6"><input type="text" name="user_name" placeholder="Your name..."></div>
+                                        <div class="col-md-6"><input type="text" name="user_email" placeholder="Email..."></div>
+                                    </div>
+                                    
+                                    <textarea name="message" placeholder="Your message..."></textarea>
+                                    <div class="text-right"><input type="submit" value="Send message"></div>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div> <!-- .row -->
+                    
+                    <br>
+                    <p class="colophon">&#169 2020. All rights reserved & Made with &#10084;&#65039; by <span style="color: #0000ff">WHY! Tech</span> </p>
+                    <div class="developed">Deveoped by Mathesh & Monesh :)</div>
+                </div><!-- .container -->
+            </footer> <!-- .site-footer -->
+</body>
+</html>
